@@ -25,21 +25,21 @@ dotnet restore
 dotnet ef migrations add InitialCreate
 dotnet ef database update
 dotnet run
-
+## 🖥 sql setup Setup
 CREATE DATABASE HackToHireDB;
 CREATE LOGIN hackuser WITH PASSWORD = 'StrongPassword123!';
 CREATE USER hackuser FOR LOGIN hackuser;
 ALTER ROLE db_owner ADD MEMBER hackuser;
 
-
+## 🖥 connection string Setup
 "ConnectionStrings": {
   "DefaultConnection": "Server=localhost;Database=HackToHireDB;User Id=hackuser;Password=StrongPassword123!;"
 }
-
+## frentendstep
 cd hack-to-hire-ui
 npm install
 ng serve -o
-
+## github push
 git init
 git add .
 git commit -m "Initial full stack project"
